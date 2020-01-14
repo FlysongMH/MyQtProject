@@ -31,7 +31,11 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>Pivot</string>
+   <string>Pivot Window</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>ico/logo.ico</normaloff>ico/logo.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">

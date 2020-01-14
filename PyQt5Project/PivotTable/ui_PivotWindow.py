@@ -24,6 +24,9 @@ class Ui_Pivot(object):
         font.setFamily("Microsoft YaHei UI")
         Pivot.setFont(font)
         Pivot.setAcceptDrops(True)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("ico/logo.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Pivot.setWindowIcon(icon)
         self.centralWidget = QtWidgets.QWidget(Pivot)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -145,7 +148,7 @@ class Ui_Pivot(object):
 
     def retranslateUi(self, Pivot):
         _translate = QtCore.QCoreApplication.translate
-        Pivot.setWindowTitle(_translate("Pivot", "Pivot"))
+        Pivot.setWindowTitle(_translate("Pivot", "Pivot Window"))
         self.menumenu_A.setTitle(_translate("Pivot", "menu_A"))
         self.menumenu_B.setTitle(_translate("Pivot", "menu_B"))
         self.menumenu_C.setTitle(_translate("Pivot", "menu_C"))
