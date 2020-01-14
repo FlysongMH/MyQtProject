@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Pivot</class>
+ <widget class="QMainWindow" name="Pivot">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI</family>
+   </font>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Pivot</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>500</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="2,3">
+        <item>
+         <widget class="QListWidget" name="listWidget_5"/>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QListWidget" name="listWidget"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QListWidget" name="listWidget_3"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QListWidget" name="listWidget_2"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QListWidget" name="listWidget_4"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>23</height>
+    </size>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(239, 239, 239);
+font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
+   </property>
+   <widget class="QMenu" name="menumenu_A">
+    <property name="title">
+     <string>menu_A</string>
+    </property>
+    <addaction name="actionmenu_A1"/>
+    <addaction name="actionmenu_A2"/>
+    <addaction name="actionmenu_A3"/>
+   </widget>
+   <widget class="QMenu" name="menumenu_B">
+    <property name="title">
+     <string>menu_B</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menumenu_C">
+    <property name="title">
+     <string>menu_C</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menumenu_D">
+    <property name="title">
+     <string>menu_D</string>
+    </property>
+   </widget>
+   <addaction name="menumenu_A"/>
+   <addaction name="menumenu_B"/>
+   <addaction name="menumenu_C"/>
+   <addaction name="menumenu_D"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>23</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actiontool_A"/>
+   <addaction name="actiontool_B"/>
+   <addaction name="actiontool_C"/>
+   <addaction name="actiontool_D"/>
+   <addaction name="separator"/>
+   <addaction name="actiontool_A_2"/>
+   <addaction name="actiontool_B_2"/>
+   <addaction name="actiontool_C_2"/>
+   <addaction name="actiontool_D_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actiontool_A">
+   <property name="text">
+    <string>tool_A</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_A</string>
+   </property>
+  </action>
+  <action name="actiontool_B">
+   <property name="text">
+    <string>tool_B</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_B</string>
+   </property>
+  </action>
+  <action name="actiontool_C">
+   <property name="text">
+    <string>tool_C</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_C</string>
+   </property>
+  </action>
+  <action name="actiontool_D">
+   <property name="text">
+    <string>tool_D</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_D</string>
+   </property>
+  </action>
+  <action name="actiontool_A_2">
+   <property name="text">
+    <string>tool_A</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_A</string>
+   </property>
+  </action>
+  <action name="actiontool_B_2">
+   <property name="text">
+    <string>tool_B</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_B</string>
+   </property>
+  </action>
+  <action name="actiontool_C_2">
+   <property name="text">
+    <string>tool_C</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_C</string>
+   </property>
+  </action>
+  <action name="actiontool_D_2">
+   <property name="text">
+    <string>tool_D</string>
+   </property>
+   <property name="toolTip">
+    <string>tool_D</string>
+   </property>
+  </action>
+  <action name="actionmenu_A1">
+   <property name="text">
+    <string>menu_A1</string>
+   </property>
+  </action>
+  <action name="actionmenu_A2">
+   <property name="text">
+    <string>menu_A2</string>
+   </property>
+  </action>
+  <action name="actionmenu_A3">
+   <property name="text">
+    <string>menu_A3</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
