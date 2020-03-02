@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtCore import * # PyQt5中的qDebug在此
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from PivotTable import PivotWindow
+from PivotWindow import PivotWindow
 
 
 if __name__ == '__main__':

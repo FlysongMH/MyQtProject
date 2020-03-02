@@ -21,8 +21,3 @@ class PivotWindow(QMainWindow):
         qr.moveCenter(cp)  # 把主窗口框架的中心点放置到屏幕的中心位置。
         self.move(qr.topLeft())  # 通过move函数把主窗口的左上角移动到其框架的左上角，这样就把窗口居中了。
 
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    pivotWindow = PivotWindow()
-    sys.exit(app.exec_())
