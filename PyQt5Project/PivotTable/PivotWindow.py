@@ -10,7 +10,7 @@ class PivotWindow(QMainWindow, Ui_Pivot):
     def init(self):
         # 调用UI工具初始化窗口
         self.setupUi(self)
-
+        self.actiontool_label.triggered.connect(self.show_label)
         # 窗口居中
         qr = self.frameGeometry()  # 获得主窗口所在的框架。
         cp = QDesktopWidget().availableGeometry().center()  # 获取显示器的分辨率，然后得到屏幕中间点的位置。
@@ -18,5 +18,5 @@ class PivotWindow(QMainWindow, Ui_Pivot):
         self.move(qr.topLeft())  # 通过move函数把主窗口的左上角移动到其框架的左上角，这样就把窗口居中了。
 
     def show_label(self):
-        label = QLabel("This is QLabel")
-        label.show()
+        self.label = QLabel("This is QLabel")
+        self.label.show()
