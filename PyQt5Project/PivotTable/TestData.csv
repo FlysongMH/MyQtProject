@@ -1,0 +1,8 @@
+time,latitude,longitude,depth,magNst,status,locationSource,magSource
+2019-01-10T12:11:24.810Z,34.128166,-117.775497,4.46,6,automatic,ci,ci
+2019-01-10T12:04:26.320Z,19.443333,-155.615997,0.72,6,automatic,hv,hv
+2019-01-10T11:57:48.980Z,33.3225,-116.393167,4.84,11,automatic,ci,ci
+2019-01-10T11:52:09.490Z,38.835667,-122.83667,1.28,7,automatic,nc,nc
+2019-01-10T11:25:44.854Z,65.1082,-149.3701,20.6,NaN,automatic,ak,ak
+2019-01-10T11:25:23.786Z,69.1518,-144.4977,10.4,NaN,reviewed,ak,ak
+2019-01-10T11:16:11.761Z,61.3318,-150.0708,20.1,NaN,automatic,ak,ak

@@ -159,7 +159,7 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
    <addaction name="separator"/>
    <addaction name="actiontool_A_2"/>
    <addaction name="actiontool_B_2"/>
-   <addaction name="actiontool_C_2"/>
+   <addaction name="actiontool_import"/>
    <addaction name="actiontool_label"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -211,12 +211,12 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
     <string>tool_B</string>
    </property>
   </action>
-  <action name="actiontool_C_2">
+  <action name="actiontool_import">
    <property name="text">
-    <string>tool_C</string>
+    <string>import</string>
    </property>
    <property name="toolTip">
-    <string>tool_C</string>
+    <string>import</string>
    </property>
   </action>
   <action name="actiontool_label">

@@ -1,5 +1,6 @@
-from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QFileDialog
 from ui_PivotWindow import Ui_Pivot
+import os
 
 class PivotWindow(QMainWindow):
     # 自动初始化PivotWindow对象
@@ -19,10 +20,24 @@ class PivotWindow(QMainWindow):
         self.init()
 
     def init(self):
+        self.cwd = os.getcwd()
         # signal and slot
         self.ui.actiontool_label.triggered.connect(self.show_label)
+        self.ui.actiontool_import.triggered.connect(self.import_data)
 
 
     def show_label(self):
         self.label = QLabel("This is QLabel")
         self.label.show()
+
+    def import_data(self):
+        self.import_dialog = QFileDialog()
+        files, filetype = QFileDialog.getOpenFileNames(self, "多文件选择", self.cwd,
+                                                       "All Files (*);;csv Files (*.csv);;Text Files (*.txt)")
+        if len(files)==0:
+            print("\n您已取消选择")
+            return
+        print("\n你选择的文件为:")
+        for file in files:
+            print(file)
+        print("文件筛选器类型：", filetype)
