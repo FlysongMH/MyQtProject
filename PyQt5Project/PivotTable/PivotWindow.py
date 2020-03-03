@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QFileDialog
 from ui_PivotWindow import Ui_Pivot
+import pandas as pd
+import numpy as np
 import os
 
 class PivotWindow(QMainWindow):
@@ -21,6 +23,7 @@ class PivotWindow(QMainWindow):
 
     def init(self):
         self.cwd = os.getcwd()
+        self.dataList = []
         # signal and slot
         self.ui.actiontool_label.triggered.connect(self.show_label)
         self.ui.actiontool_import.triggered.connect(self.import_data)
@@ -41,3 +44,12 @@ class PivotWindow(QMainWindow):
         for file in files:
             print(file)
         print("文件筛选器类型：", filetype)
+
+        # 导入数据
+        for file in files:
+            if(file.endswith(".csv")):
+                temp = pd.read_csv(file)
+                print(temp.shape)
+                print(temp)
+                self.dataList.append(temp)
+                break
