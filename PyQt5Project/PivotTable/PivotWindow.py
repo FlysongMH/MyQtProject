@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel
 from ui_PivotWindow import Ui_Pivot
 
-class PivotWindow(QMainWindow):
+class PivotWindow(QMainWindow, Ui_Pivot):
     # 自动初始化PivotWindow对象
     def __init__(self):
         super().__init__()   # 执行父类QMainWindow的初始化方法
@@ -9,8 +9,7 @@ class PivotWindow(QMainWindow):
 
     def init(self):
         # 调用UI工具初始化窗口
-        ui = Ui_Pivot()
-        ui.setupUi(self)
+        self.setupUi(self)
 
         # 窗口居中
         qr = self.frameGeometry()  # 获得主窗口所在的框架。
