@@ -1,13 +1,21 @@
-from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QFileDialog
-from ui_PivotWindow import Ui_Pivot
 import pandas as pd
 import numpy as np
 import os
+from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QFileDialog
+from ui_PivotWindow import Ui_Pivot
+from table_model import PandasModel
+
 
 class PivotWindow(QMainWindow):
     # 自动初始化PivotWindow对象
     def __init__(self):
-        super().__init__()   # 执行父类QMainWindow的初始化方法
+        super().__init__()  # 执行父类QMainWindow的初始化方法
+        # 其他初始化
+        self.init_ui()
+        self.init_var()
+        self.init_slot()
+
+    def init_ui(self):
         # ui初始化, 新建一个成员ui
         self.ui = Ui_Pivot()
         self.ui.setupUi(self)
@@ -18,26 +26,24 @@ class PivotWindow(QMainWindow):
         qr.moveCenter(cp)  # 把主窗口框架的中心点放置到屏幕的中心位置。
         self.move(qr.topLeft())  # 通过move函数把主窗口的左上角移动到其框架的左上角，这样就把窗口居中了。
 
-        # 其他初始化
-        self.init()
-
-    def init(self):
+    def init_var(self):
         self.cwd = os.getcwd()
         self.dataList = []
+
+    def init_slot(self):
         # signal and slot
-        self.ui.actiontool_label.triggered.connect(self.show_label)
-        self.ui.actiontool_import.triggered.connect(self.import_data)
+        self.ui.actiontool_label.triggered.connect(self.slot_show_label)
+        self.ui.actiontool_import.triggered.connect(self.slot_import_data)
 
-
-    def show_label(self):
+    def slot_show_label(self):
         self.label = QLabel("This is QLabel")
         self.label.show()
 
-    def import_data(self):
-        self.import_dialog = QFileDialog()
+    def slot_import_data(self):
+        # 打开多个文件，返回两个参数：文件路径列表和文件筛选器结果
         files, filetype = QFileDialog.getOpenFileNames(self, "多文件选择", self.cwd,
                                                        "All Files (*);;csv Files (*.csv);;Text Files (*.txt)")
-        if len(files)==0:
+        if len(files) == 0:
             print("\n您已取消选择")
             return
         print("\n你选择的文件为:")
@@ -47,9 +53,11 @@ class PivotWindow(QMainWindow):
 
         # 导入数据
         for file in files:
-            if(file.endswith(".csv")):
+            if (file.endswith(".csv")):
                 temp = pd.read_csv(file)
                 print(temp.shape)
-                print(temp)
                 self.dataList.append(temp)
                 break
+
+        self.model = PandasModel(self.dataList[0])
+        self.ui.tableView.setModel(self.model)

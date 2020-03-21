@@ -1,47 +1,43 @@
-from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex
+import pandas as pd
+import numpy as np
+from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex, QVariant
 from PyQt5.QtGui import QColor
 
 
-class CustomTableModel(QAbstractTableModel):
-    def __init__(self, data=None):
+class PandasModel(QAbstractTableModel):
+    def __init__(self, df=pd.DataFrame()):
         QAbstractTableModel.__init__(self)
-        self.load_data(data)
-
-    def load_data(self, data):
-        self.input_dates = data[0].values
-        self.input_magnitudes = data[1].values
-
-        self.column_count = 2
-        self.row_count = len(self.input_magnitudes)
+        self._df = df
 
     def rowCount(self, parent=QModelIndex()):
-        return self.row_count
+        return self._df.shape[0]
 
     def columnCount(self, parent=QModelIndex()):
-        return self.column_count
+        return self._df.shape[1]
 
-    def headerData(self, section, orientation, role):
-        if role != Qt.DisplayRole:
-            return None
-        if orientation == Qt.Horizontal:
-            return ("Date", "Magnitude")[section]
-        else:
-            return "{}".format(section)
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
+        if role != Qt.DisplayRole:  # 仅支持显示
+            return QVariant()
+        if orientation == Qt.Horizontal:  # show columns
+            try:
+                return self._df.columns[section]
+            except (IndexError,):
+                return QVariant()
+        elif orientation == Qt.Vertical:  # show index
+            try:
+                return self._df.index[section]
+            except (IndexError,):
+                return QVariant()
 
     def data(self, index, role=Qt.DisplayRole):
-        column = index.column()
-        row = index.row()
+        if not index.isValid():
+            return QVariant()
 
         if role == Qt.DisplayRole:
-            if column == 0:
-                raw_date = self.input_dates[row]
-                date = "{}".format(raw_date.toPython())
-                return date[:-3]
-            elif column == 1:
-                return "{:.2f}".format(self.input_magnitudes[row])
-        elif role == Qt.BackgroundRole:
-            return QColor(Qt.white)
-        elif role == Qt.TextAlignmentRole:
-            return Qt.AlignRight
+            return str(self._df.iloc[index.row(), index.column()])
+        # elif role == Qt.BackgroundRole:
+        #     return QColor(Qt.white)
+        # elif role == Qt.TextAlignmentRole:
+        #     return Qt.AlignRight
 
         return None
