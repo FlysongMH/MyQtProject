@@ -87,34 +87,36 @@ class PivotWindow(QMainWindow):
         # creating LineSeries
         data = self.dataList[0]
         len = data.shape[0]
-        self.series = QtChart.QLineSeries()
-        self.series.setName(col)
+        series = QtChart.QLineSeries()
+        series.setName(col)
         for idx in data.index:
-            self.series.append(idx, data.loc[idx,col])
+            series.append(idx, data.loc[idx,col])
         print(data.index.min(), data.index.max())
 
         # define x/y axis
-        self.x_axis = QtChart.QValueAxis()
-        self.x_axis.setRange(data.index.min(), data.index.max())
-        self.x_axis.setLabelFormat("%0.1f")  # 设置坐标轴的显示方式，精确到小数点后1位
-        self.x_axis.setTickCount(len)
-        self.x_axis.setMinorTickCount(1)  # 设置每个单元格有几个小的分级
+        x_axis = QtChart.QValueAxis()
+        x_axis.setRange(data.index.min(), data.index.max())
+        x_axis.setLabelFormat("%0.1f")  # 设置坐标轴的显示方式，精确到小数点后1位
+        x_axis.setTickCount(len)
+        x_axis.setMinorTickCount(1)  # 设置每个单元格有几个小的分级
 
-        self.y_axis = QtChart.QValueAxis()
-        self.y_axis.setRange(data[col].min(), data[col].max())
-        self.y_axis.setLabelFormat("%0.2f")  # 设置坐标轴的显示方式，精确到小数点后2位
-        self.y_axis.setTickCount(10)
-        self.y_axis.setMinorTickCount(0)  # 设置每个单元格有几个小的分级
+        y_axis = QtChart.QValueAxis()
+        y_axis.setRange(data[col].min(), data[col].max())
+        y_axis.setLabelFormat("%0.2f")  # 设置坐标轴的显示方式，精确到小数点后2位
+        y_axis.setTickCount(10)
+        y_axis.setMinorTickCount(0)  # 设置每个单元格有几个小的分级
 
         # Creating QChartQview
         self.chartView = QtChart.QChartView()
         self.chartView.resize(800,600)
         self.ui_moveCenter(self.chartView)
-        self.chartView.chart().addSeries(self.series)
-        self.chartView.chart().setAxisX(self.x_axis)  # 设置x轴属性
-        self.chartView.chart().setAxisY(self.y_axis)  # 设置y轴属性
-        # self.chartView.chart().createDefaultAxes() # 使用默认坐标系
-        self.chartView.chart().setTitle("数据列显示：%s" % col)  # 设置标题
+        chart = QtChart.QChart()
+        chart.addSeries(series)
+        chart.setAxisX(x_axis)  # 设置x轴属性
+        chart.setAxisY(y_axis)  # 设置y轴属性
+        # chart.createDefaultAxes() # 使用默认坐标系
+        chart.setTitle("数据列显示：%s" % col)  # 设置标题
+        self.chartView.setChart(chart)
         self.chartView.show()
 
 
