@@ -50,36 +50,24 @@
      <height>500</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>3</number>
+    </property>
+    <property name="spacing">
+     <number>1</number>
+    </property>
     <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout" stretch="2,3">
-        <item>
-         <widget class="QListWidget" name="listWidget_5"/>
-        </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <widget class="QListWidget" name="listWidget"/>
-          </item>
-          <item row="0" column="1">
-           <widget class="QListWidget" name="listWidget_3"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QListWidget" name="listWidget_2"/>
-          </item>
-          <item row="1" column="1">
-           <widget class="QListWidget" name="listWidget_4"/>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QTableWidget" name="tableWidget"/>
-      </item>
-     </layout>
+     <widget class="QTableView" name="tableView"/>
     </item>
    </layout>
   </widget>
@@ -118,20 +106,8 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
      <string>menu_B</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menumenu_C">
-    <property name="title">
-     <string>menu_C</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menumenu_D">
-    <property name="title">
-     <string>menu_D</string>
-    </property>
-   </widget>
    <addaction name="menumenu_A"/>
    <addaction name="menumenu_B"/>
-   <addaction name="menumenu_C"/>
-   <addaction name="menumenu_D"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="sizePolicy">
@@ -152,14 +128,8 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actiontool_A"/>
-   <addaction name="actiontool_B"/>
-   <addaction name="actiontool_C"/>
-   <addaction name="actiontool_D"/>
-   <addaction name="separator"/>
-   <addaction name="actiontool_A_2"/>
-   <addaction name="actiontool_B_2"/>
    <addaction name="actiontool_import"/>
+   <addaction name="separator"/>
    <addaction name="actiontool_label"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
