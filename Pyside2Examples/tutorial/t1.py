@@ -43,8 +43,8 @@
 
 
 import sys
-# from PySide2.QtWidgets import QApplication, QPushButton, QMainWindow
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+from PySide2.QtWidgets import QApplication, QPushButton, QMainWindow
+# from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 
 if __name__ == '__main__':
 
