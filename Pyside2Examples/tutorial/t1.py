@@ -43,14 +43,19 @@
 
 
 import sys
-from PySide2 import QtWidgets
+# from PySide2.QtWidgets import QApplication, QPushButton, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 
+if __name__ == '__main__':
 
-app = QtWidgets.QApplication(sys.argv)
+    app = QApplication(sys.argv)
 
-hello = QtWidgets.QPushButton("Hello world!")
-hello.resize(100, 30)
+    # window = QMainWindow()
+    # window.setWindowTitle("Hello world!")
+    # window.resize(800, 600)
+    # window.show()
 
-hello.show()
-
-sys.exit(app.exec_())
+    button = QPushButton("Hello world!")
+    button.resize(400, 30)
+    button.show()
+    sys.exit(app.exec_())
