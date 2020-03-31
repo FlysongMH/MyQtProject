@@ -1,46 +1,5 @@
-
-#############################################################################
-##
-## Copyright (C) 2016 The Qt Company Ltd.
-## Contact: http://www.qt.io/licensing/
-##
-## This file is part of the Qt for Python examples of the Qt Toolkit.
-##
-## $QT_BEGIN_LICENSE:BSD$
-## You may use this file under the terms of the BSD license as follows:
-##
-## "Redistribution and use in source and binary forms, with or without
-## modification, are permitted provided that the following conditions are
-## met:
-##   * Redistributions of source code must retain the above copyright
-##     notice, this list of conditions and the following disclaimer.
-##   * Redistributions in binary form must reproduce the above copyright
-##     notice, this list of conditions and the following disclaimer in
-##     the documentation and/or other materials provided with the
-##     distribution.
-##   * Neither the name of The Qt Company Ltd nor the names of its
-##     contributors may be used to endorse or promote products derived
-##     from this software without specific prior written permission.
-##
-##
-## THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-## "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-## LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-## A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-## OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-## SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-## LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-## DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-## THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-## (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-## OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-##
-## $QT_END_LICENSE$
-##
-#############################################################################
-
 # PySide2 tutorial 11
-
+# 这是个高射炮打蚊子游戏，当前新增定时器以及射击角度和射击原力
 
 import sys
 import math
@@ -95,9 +54,9 @@ class CannonField(QtWidgets.QWidget):
         self.currentAngle = 45
         self.currentForce = 0
         self.timerCount = 0
-        self.autoShootTimer = QtCore.QTimer(self)
+        self.autoShootTimer = QtCore.QTimer(self)  # 射击定时器
         self.connect(self.autoShootTimer, QtCore.SIGNAL("timeout()"),
-                     self.moveShot)
+                     self.moveShot)  # 射击定时器超时动作
         self.shootAngle = 0
         self.shootForce = 0
         self.setPalette(QtGui.QPalette(QtGui.QColor(250, 250, 200)))
@@ -132,22 +91,24 @@ class CannonField(QtWidgets.QWidget):
 
     @QtCore.Slot()
     def shoot(self):
+        '''射击开始'''
         if self.autoShootTimer.isActive():
-            return
+            return  # 定时器保护，无法连续射击
         self.timerCount = 0
         self.shootAngle = self.currentAngle
         self.shootForce = self.currentForce
-        self.autoShootTimer.start(5)
+        self.autoShootTimer.start(4)  # 定时间隔是5ms？
 
     @QtCore.Slot()
     def moveShot(self):
-        region = QtGui.QRegion(self.shotRect())
+        # 移动子弹，
+        region = QtGui.QRegion(self.shotRect())  # 子弹当前位置
         self.timerCount += 1
 
-        shotR = self.shotRect()
+        shotR = self.shotRect() # 子弹下一个位置
 
         if shotR.x() > self.width() or shotR.y() > self.height():
-            self.autoShootTimer.stop()
+            self.autoShootTimer.stop()  # 超出边界就停止
         else:
             region = region.united(QtGui.QRegion(shotR))
 
@@ -184,18 +145,19 @@ class CannonField(QtWidgets.QWidget):
         return result
 
     def shotRect(self):
-        gravity = 4.0
+        # 根据timerCount计算当前移动位置
+        gravity = 10  # 重力加速度
 
         time = self.timerCount / 40.0
-        velocity = self.shootForce
-        radians = self.shootAngle * 3.14159265 / 180
+        velocity = self.shootForce  # 移动速度
+        radians = self.shootAngle * 3.14159265 / 180  # 弧度，移动方向
 
         velx = velocity * math.cos(radians)
         vely = velocity * math.sin(radians)
         x0 = (CannonField.barrelRect.right() + 5) * math.cos(radians)
         y0 = (CannonField.barrelRect.right() + 5) * math.sin(radians)
-        x = x0 + velx * time
-        y = y0 + vely * time - 0.5 * gravity * time * time
+        x = x0 + velx * time    # 水平位移
+        y = y0 + vely * time - 0.5 * gravity * time * time  # 垂直位移
 
         result = QtCore.QRect(0, 0, 6, 6)
         result.moveCenter(QtCore.QPoint(round(x), self.height() - 1 - round(y)))
