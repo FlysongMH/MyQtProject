@@ -13,7 +13,7 @@ enum operatorSymbol
     OP_Add,
     OP_Minus,
     OP_Multi,
-    OP_Divi,
+    OP_Divi
     
 };
 
@@ -22,7 +22,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     
 private slots:

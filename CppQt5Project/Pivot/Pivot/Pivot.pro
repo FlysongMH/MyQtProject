@@ -28,7 +28,16 @@ SOURCES += \
         pivot.cpp
 
 HEADERS += \
-        pivot.h
+        base_define.h \
+        base_number.h \
+        pivot.h \
+        version.h
 
 FORMS += \
         pivot.ui
+
+RC_FILE += \
+    pivot.rc
+
+RESOURCES += \
+    pivot.qrc
