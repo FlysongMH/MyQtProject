@@ -5,9 +5,9 @@
 #include <vector>
 
 //self defined header
-//#include "base_number.h"
+#include "base_number.h"
 
-
+using namespace std;
 
 #define NULL        0
 #define NULLptr     nullptr
