@@ -1,7 +1,7 @@
-﻿#include "pivot.h"
-#include <QDebug>
-#include <QApplication>
+﻿#include <QApplication>
 #include <QStyleFactory>
+#include <QDebug>
+#include "pivot.h"
 
 int main(int argc, char *argv[])
 {

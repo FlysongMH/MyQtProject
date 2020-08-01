@@ -2,15 +2,15 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include "base_define.h"
 #include <QStringList>
+#include "base_define.h"
 
-//data类存储读取的数据，处理较小数据量时可以直接对每个表分配 行数*列数的大小，分配较大数据量时采用列存储
-class data
+//数据库类存储读取的数据，处理较小数据量时可以直接对每个表分配 行数*列数的大小，分配较大数据量时采用列存储
+class DataBase
 {
 public:
-    data();
-    data(UINT32 row, UINT32 col);
+    DataBase();
+    DataBase(UINT32 row, UINT32 col);
     
     void setRowCnt(UINT32 RowCnt);
     void setColCnt(UINT32 ColCnt);

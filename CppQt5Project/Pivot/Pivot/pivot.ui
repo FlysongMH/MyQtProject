@@ -101,33 +101,33 @@
     <string notr="true">background-color: rgb(239, 239, 239);
 font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
    </property>
-   <widget class="QMenu" name="menumenu_A">
+   <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>menu_A</string>
+     <string>File</string>
     </property>
-    <addaction name="actionmenu_A1"/>
-    <addaction name="actionmenu_A2"/>
-    <addaction name="actionmenu_A3"/>
+    <addaction name="file_Open"/>
+    <addaction name="file_Save"/>
+    <addaction name="file_Close"/>
    </widget>
-   <widget class="QMenu" name="menumenu_B">
+   <widget class="QMenu" name="menu_Edit">
     <property name="title">
-     <string>menu_B</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menumenu_C">
-    <property name="title">
-     <string>menu_C</string>
+     <string>Edit</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menumenu_D">
+   <widget class="QMenu" name="menu_View">
     <property name="title">
-     <string>menu_D</string>
+     <string>View</string>
     </property>
    </widget>
-   <addaction name="menumenu_A"/>
-   <addaction name="menumenu_B"/>
-   <addaction name="menumenu_C"/>
-   <addaction name="menumenu_D"/>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="sizePolicy">
@@ -148,7 +148,7 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actiontool_A"/>
+   <addaction name="act_Open"/>
    <addaction name="actiontool_B"/>
    <addaction name="actiontool_C"/>
    <addaction name="actiontool_D"/>
@@ -159,12 +159,12 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
    <addaction name="actiontool_D_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actiontool_A">
+  <action name="act_Open">
    <property name="text">
-    <string>tool_A</string>
+    <string>Open</string>
    </property>
    <property name="toolTip">
-    <string>tool_A</string>
+    <string>Open</string>
    </property>
   </action>
   <action name="actiontool_B">
@@ -223,19 +223,19 @@ font: 75 9pt &quot;Microsoft YaHei UI&quot;;</string>
     <string>tool_D</string>
    </property>
   </action>
-  <action name="actionmenu_A1">
+  <action name="file_Open">
    <property name="text">
-    <string>menu_A1</string>
+    <string>Open</string>
    </property>
   </action>
-  <action name="actionmenu_A2">
+  <action name="file_Save">
    <property name="text">
-    <string>menu_A2</string>
+    <string>Save</string>
    </property>
   </action>
-  <action name="actionmenu_A3">
+  <action name="file_Close">
    <property name="text">
-    <string>menu_A3</string>
+    <string>Close</string>
    </property>
   </action>
  </widget>

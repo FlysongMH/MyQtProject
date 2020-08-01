@@ -1,16 +1,16 @@
 ﻿#include "data.h"
 
-data::data()
+DataBase::DataBase()
 {
     
 }
 
-void data::setRowCnt(UINT32 RowCnt)
+void DataBase::setRowCnt(UINT32 RowCnt)
 {
     m_row_cnt = RowCnt;
 }
 
-void data::setColCnt(UINT32 ColCnt)
+void DataBase::setColCnt(UINT32 ColCnt)
 {
     m_col_cnt = ColCnt;
 }
