@@ -40,7 +40,7 @@ private:
     
 private:
     Ui::Pivot *ui;
-    DataBase *pDataBase;
+    DataFrame dataFrameMerge;
 };
 
 #endif // PIVOT_H

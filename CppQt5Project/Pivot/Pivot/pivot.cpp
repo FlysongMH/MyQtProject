@@ -6,13 +6,11 @@ Pivot::Pivot(QWidget *parent) : QMainWindow(parent),
     ui(new Ui::Pivot)
 {
     ui->setupUi(this);
-    pDataBase = new DataBase();
 }
 
 Pivot::~Pivot()
 {
     delete ui;
-    delete pDataBase;
 }
 
 //菜单栏动作

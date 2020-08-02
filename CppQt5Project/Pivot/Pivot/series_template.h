@@ -3,27 +3,28 @@
 #include <typeinfo>
 #include "base_define.h"
 
-//数据序列类, 支持不同的数据类型T
+//数据序列模板类, 支持不同的数据类型T
+template<typename T >
 class Series
 {
 public:
     Series();
-    Series(DataType dtype, UINT32 length);
-    Series(DataType dtype, UINT32 length, QString head);
+    Series(UINT32 length);
+    Series(UINT32 length, QString head);
     ~Series();
     
     //数据修改追加，暂不支持删除
     void set_head(QString head){m_head = head;}
-    template<typename T > void modify(UINT32 index, T value);
-    template<typename T > void pushback(T value);
+    void modify(UINT32 index, T value);
+    void pushback(T value);
     
+private:
+    void set_datatype();
 private:
     DataType    m_dtype;
     UINT32      m_length;
     QString     m_head;
-    vector<UINT32>   m_data_int32;
-    vector<double>   m_data_double;
-    vector<string>   m_data_string;
+    vector<T>   m_data;
     
 };
 

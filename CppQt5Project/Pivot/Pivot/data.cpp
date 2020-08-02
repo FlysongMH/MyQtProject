@@ -1,17 +1,17 @@
 ﻿#include "data.h"
 
-DataBase::DataBase()
+DataFrame::DataFrame(UINT32 RowCnt, UINT32 ColCnt):
+    m_row_cnt(RowCnt),
+    m_col_cnt(ColCnt)
 {
-    m_row_cnt = 0;
-    m_col_cnt = 0;
+    
 }
-
-void DataBase::setRowCnt(UINT32 RowCnt)
+DataFrame::~DataFrame()
 {
-    m_row_cnt = RowCnt;
-}
-
-void DataBase::setColCnt(UINT32 ColCnt)
-{
-    m_col_cnt = ColCnt;
+    QList<Series*>::ConstIterator ci;
+    for(ci=m_data.constBegin();ci!=m_data.constEnd();++ci)
+    {
+        delete *ci;
+    }
+    m_data.clear();
 }

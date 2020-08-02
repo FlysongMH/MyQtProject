@@ -22,10 +22,9 @@ typedef std::vector<std::vector<double > >    vvdouble;
 //支持存储的数据类型
 enum DataType
 {
-    DT_DOUBLE,
     DT_INT,
-    DT_STRING,
-    DT_NULL,
+    DT_DOUBLE,
+    DT_STRING
 };
 
 
