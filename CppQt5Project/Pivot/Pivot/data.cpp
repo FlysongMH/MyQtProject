@@ -2,7 +2,8 @@
 
 DataBase::DataBase()
 {
-    
+    m_row_cnt = 0;
+    m_col_cnt = 0;
 }
 
 void DataBase::setRowCnt(UINT32 RowCnt)

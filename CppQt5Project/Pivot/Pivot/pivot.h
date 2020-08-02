@@ -5,6 +5,8 @@
 #include <QtWidgets>
 #include <QMainWindow>
 #include <QLabel>
+#include <QFileDialog>
+#include <QTextStream>
 #include <QDragEnterEvent> 
 #include "data.h"
 
@@ -38,6 +40,7 @@ private:
     
 private:
     Ui::Pivot *ui;
+    DataBase *pDataBase;
 };
 
 #endif // PIVOT_H

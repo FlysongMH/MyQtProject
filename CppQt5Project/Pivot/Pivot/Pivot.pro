@@ -24,16 +24,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        data.cpp \
         main.cpp \
-        pivot.cpp
+        pivot.cpp \
+        data.cpp \
+        series.cpp
 
 HEADERS += \
         base_define.h \
         base_number.h \
-        data.h \
         pivot.h \
-        version.h
+        version.h \
+        data.h \
+        series.h
 
 FORMS += \
         pivot.ui
