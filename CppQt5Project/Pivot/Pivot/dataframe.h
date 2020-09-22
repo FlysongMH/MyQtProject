@@ -1,10 +1,8 @@
-﻿//数据存储与处理类
-#ifndef DATA_H
-#define DATA_H
+﻿#ifndef DATABASE_H
+#define DATABASE_H
 
+#include "dataseries.h"
 
-#include "base_define.h"
-#include "series.h"
 
 //数据库类存储读取的数据，处理较小数据量时可以直接对每个表分配 行数*列数的大小，分配较大数据量时采用列存储
 class DataFrame
@@ -31,4 +29,4 @@ private:    //数据信息
     
 };
 
-#endif // DATA_H
+#endif // DATABASE_H

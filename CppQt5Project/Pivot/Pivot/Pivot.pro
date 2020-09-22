@@ -24,18 +24,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+        data_input.cpp \
+        database.cpp \
+        dataframe.cpp \
+        dataseries.cpp \
         main.cpp \
-        pivot.cpp \
-        data.cpp \
-        series.cpp
+        pivot.cpp
 
 HEADERS += \
         base_define.h \
         base_number.h \
+        database.h \
+        dataframe.h \
+        dataseries.h \
         pivot.h \
-        version.h \
-        data.h \
-        series.h
+        version.h
 
 FORMS += \
         pivot.ui

@@ -1,5 +1,5 @@
 ﻿#include <QDebug>
-#include "series.h"
+#include "dataseries.h"
 
 Series::Series():
     m_dtype(DT_STRING),

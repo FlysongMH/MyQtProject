@@ -1,4 +1,5 @@
 ﻿#include <QDebug>
+#include <QTime>
 #include "pivot.h"
 #include "ui_pivot.h"
 
@@ -6,11 +7,14 @@ Pivot::Pivot(QWidget *parent) : QMainWindow(parent),
     ui(new Ui::Pivot)
 {
     ui->setupUi(this);
+    
+    m_database = new DataBase();
 }
 
 Pivot::~Pivot()
 {
     delete ui;
+    delete m_database;
 }
 
 //菜单栏动作
@@ -57,41 +61,8 @@ void Pivot::dropEvent(QDropEvent *event)
         if(!OneUrl.right(3).compare("txt") || !OneUrl.right(3).compare("csv"))
         {
             qDebug()<<OneUrl;
+            OpenOneFile(OneUrl);
         }
     }
 
-}
-
-//Private Functions
-
-void Pivot::OpenFiles()
-{
-    QStringList files = QFileDialog::getOpenFileNames(
-                              this,
-                              "Select one or more files to open",
-                              "",
-                              "Data (*.txt *.csv)");
-    
-    for(int i=0;i<files.size();i++)
-    {
-        qDebug()<<files[i];
-        OpenOneFile(files[i]);
-    }
-
-}
-void Pivot::OpenOneFile(QString FilePath)
-{
-    qDebug()<<"Pivot::OpenOneFile";
-    QFile dictionaryFile(FilePath);
-    dictionaryFile.open(QFile::ReadOnly);
-    QTextStream inputStream(&dictionaryFile);
-    
-    int count=2;
-    QString line;
-    while (!inputStream.atEnd() && count>0) 
-    {
-        line = inputStream.readLine();
-        qDebug()<<line<<"\n";
-        count--;
-    }
 }

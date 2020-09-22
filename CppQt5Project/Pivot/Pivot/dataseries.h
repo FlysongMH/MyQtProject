@@ -2,6 +2,7 @@
 #define SERIES_H
 #include <typeinfo>
 #include "base_define.h"
+#include "base_number.h"
 
 //数据序列类, 支持不同的数据类型T
 class Series

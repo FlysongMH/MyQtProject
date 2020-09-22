@@ -8,7 +8,7 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QDragEnterEvent> 
-#include "data.h"
+#include "database.h"
 
 namespace Ui {
 class Pivot;
@@ -36,11 +36,11 @@ protected:
     
 private:
     void OpenFiles();
-    void OpenOneFile(QString FilePath);
+    void OpenOneFile(const QString &FilePath);
     
 private:
     Ui::Pivot *ui;
-    DataFrame dataFrameMerge;
+    DataBase  *m_database;
 };
 
 #endif // PIVOT_H
