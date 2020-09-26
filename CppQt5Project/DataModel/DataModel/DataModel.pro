@@ -15,6 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        data_model_series.cpp \
         main.cpp \
         template_array.cpp \
         template_dataframe.cpp
@@ -27,6 +28,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     base_define.h \
     base_number.h \
+    data_model_series.h \
     dataframe.h \
     template_array.h \
     template_dataframe.h
