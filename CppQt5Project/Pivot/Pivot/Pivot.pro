@@ -30,12 +30,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 #工程中包含的源文件
 SOURCES += \
-        data_input.cpp \
         database.cpp \
         dataframe.cpp \
         dataseries.cpp \
         main.cpp \
-        pivot.cpp
+        pivot.cpp \
+        pivot_import.cpp \
+        pivot_slot.cpp
 
 #工程中包含的头文件
 HEADERS += \

@@ -1,8 +1,11 @@
-﻿#include <QDebug>
+﻿/*
+ * Pivot类的数据导入导出功能库
+*/
+#include <QDebug>
 #include <QTime>
 #include "pivot.h"
-//Private Functions
 
+//弹出文件对话框打开多个文件
 void Pivot::OpenFiles()
 {
     //通过文件对话框获取要打开的文件路径列表
