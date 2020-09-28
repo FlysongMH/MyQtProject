@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>MainWindow</class>
+<widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+  <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1372</width>
+    <height>900</height>
+  </rect>
+  </property>
+  <property name="sizePolicy">
+  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+  </sizepolicy>
+  </property>
+  <property name="acceptDrops">
+  <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+  <string>Fennec</string>
+  </property>
+  <widget class="QWidget" name="mainwindow_data_process">
+  <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+    </sizepolicy>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5" rowstretch="1,0">
+    <property name="leftMargin">
+    <number>2</number>
+    </property>
+    <property name="topMargin">
+    <number>2</number>
+    </property>
+    <property name="rightMargin">
+    <number>2</number>
+    </property>
+    <property name="bottomMargin">
+    <number>2</number>
+    </property>
+    <property name="spacing">
+    <number>1</number>
+    </property>
+    <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_progressBar" stretch="0,1,0,2">
+      <item>
+      <widget class="QProgressBar" name="progressBar">
+        <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+        </sizepolicy>
+        </property>
+        <property name="minimumSize">
+        <size>
+          <width>200</width>
+          <height>12</height>
+        </size>
+        </property>
+        <property name="maximumSize">
+        <size>
+          <width>200</width>
+          <height>12</height>
+        </size>
+        </property>
+        <property name="styleSheet">
+        <string notr="true">QProgressBar {
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    width: 10px;
+    margin: 0.5px;
+}</string>
+        </property>
+        <property name="value">
+        <number>0</number>
+        </property>
+      </widget>
+      </item>
+      <item>
+      <spacer name="horizontalSpacer">
+        <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+        <size>
+          <width>40</width>
+          <height>12</height>
+        </size>
+        </property>
+      </spacer>
+      </item>
+      <item>
+      <widget class="QLabel" name="label_scene_count">
+        <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+        </sizepolicy>
+        </property>
+        <property name="minimumSize">
+        <size>
+          <width>200</width>
+          <height>0</height>
+        </size>
+        </property>
+        <property name="maximumSize">
+        <size>
+          <width>200</width>
+          <height>16777215</height>
+        </size>
+        </property>
+        <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+        <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+        <set>Qt::AlignCenter</set>
+        </property>
+      </widget>
+      </item>
+      <item>
+      <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+        <size>
+          <width>40</width>
+          <height>12</height>
+        </size>
+        </property>
+      </spacer>
+      </item>
+    </layout>
+    </item>
+    <item row="0" column="0">
+    <widget class="QTabWidget" name="tabMainWindow">
+      <property name="font">
+      <font>
+        <family>Tahoma</family>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+      </font>
+      </property>
+      <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+      <number>0</number>
+      </property>
+      <widget class="QWidget" name="widgetFirstPage">
+      <attribute name="title">
+        <string>Main</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout" rowstretch="0,1">
+        <property name="leftMargin">
+        <number>0</number>
+        </property>
+        <property name="topMargin">
+        <number>0</number>
+        </property>
+        <property name="rightMargin">
+        <number>0</number>
+        </property>
+        <property name="bottomMargin">
+        <number>0</number>
+        </property>
+        <property name="spacing">
+        <number>0</number>
+        </property>
+        <item row="0" column="0">
+        <layout class="QHBoxLayout" name="hL_3list" stretch="2,3,3">
+          <property name="spacing">
+          <number>2</number>
+          </property>
+          <item>
+          <layout class="QVBoxLayout" name="vL_list_indication" stretch="0,1">
+            <property name="spacing">
+            <number>2</number>
+            </property>
+            <item>
+            <layout class="QHBoxLayout" name="vL_list_indication_filter" stretch="0,1">
+              <property name="spacing">
+              <number>10</number>
+              </property>
+              <item>
+              <widget class="QLabel" name="label_indication">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>40</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="baseSize">
+                <size>
+                  <width>0</width>
+                  <height>20</height>
+                </size>
+                </property>
+                <property name="font">
+                <font>
+                  <family>Tahoma</family>
+                </font>
+                </property>
+                <property name="text">
+                <string>Stat</string>
+                </property>
+                <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+              </widget>
+              </item>
+              <item>
+              <widget class="QLineEdit" name="edit_stat_filter">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 222);</string>
+                </property>
+              </widget>
+              </item>
+            </layout>
+            </item>
+            <item>
+            <widget class="QListWidget" name="list_indication">
+              <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+              </sizepolicy>
+              </property>
+              <property name="minimumSize">
+              <size>
+                <width>300</width>
+                <height>360</height>
+              </size>
+              </property>
+              <property name="styleSheet">
+              <string notr="true">background-color: rgb(222, 255, 222);</string>
+              </property>
+              <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+              </property>
+              <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+            </widget>
+            </item>
+          </layout>
+          </item>
+          <item>
+          <layout class="QVBoxLayout" name="vL_list_scene_top" stretch="1,0,0">
+            <property name="spacing">
+            <number>2</number>
+            </property>
+            <item>
+            <layout class="QHBoxLayout" name="hL_list_scene" stretch="1,0">
+              <property name="spacing">
+              <number>2</number>
+              </property>
+              <item>
+              <layout class="QVBoxLayout" name="vL_list_scene" stretch="0,1">
+                <property name="spacing">
+                <number>1</number>
+                </property>
+                <item>
+                <layout class="QHBoxLayout" name="hL_list_scene_filter" stretch="0,1,0,0">
+                  <property name="spacing">
+                  <number>10</number>
+                  </property>
+                  <item>
+                  <widget class="QLabel" name="label_scene">
+                    <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                    </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                    <size>
+                      <width>40</width>
+                      <height>0</height>
+                    </size>
+                    </property>
+                    <property name="text">
+                    <string>Scene</string>
+                    </property>
+                    <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </property>
+                  </widget>
+                  </item>
+                  <item>
+                  <widget class="QLineEdit" name="edit_scene_filter">
+                    <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                    </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 222);</string>
+                    </property>
+                  </widget>
+                  </item>
+                  <item>
+                  <widget class="QCheckBox" name="checkBox_scene_filter">
+                    <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                    </sizepolicy>
+                    </property>
+                    <property name="text">
+                    <string>Exclude</string>
+                    </property>
+                    <property name="checked">
+                    <bool>false</bool>
+                    </property>
+                  </widget>
+                  </item>
+                  <item>
+                  <widget class="QCheckBox" name="checkBox_SceneGrp">
+                    <property name="text">
+                    <string>KpiByGrp</string>
+                    </property>
+                  </widget>
+                  </item>
+                </layout>
+                </item>
+                <item>
+                <widget class="QListWidget" name="list_scene">
+                  <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                  <size>
+                    <width>500</width>
+                    <height>0</height>
+                  </size>
+                  </property>
+                  <property name="styleSheet">
+                  <string notr="true">background-color: rgb(222, 255, 222);</string>
+                  </property>
+                  <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="dragEnabled">
+                  <bool>true</bool>
+                  </property>
+                  <property name="dragDropMode">
+                  <enum>QAbstractItemView::InternalMove</enum>
+                  </property>
+                  <property name="defaultDropAction">
+                  <enum>Qt::MoveAction</enum>
+                  </property>
+                  <property name="selectionMode">
+                  <enum>QAbstractItemView::ExtendedSelection</enum>
+                  </property>
+                </widget>
+                </item>
+              </layout>
+              </item>
+              <item>
+              <layout class="QVBoxLayout" name="vL_list_scene_sort" stretch="0,0,0,0,0,1">
+                <property name="spacing">
+                <number>6</number>
+                </property>
+                <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+                </property>
+                <item>
+                <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                  <size>
+                    <width>18</width>
+                    <height>30</height>
+                  </size>
+                  </property>
+                </spacer>
+                </item>
+                <item>
+                <widget class="QPushButton" name="button_top_scene_item">
+                  <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="maximumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="baseSize">
+                  <size>
+                    <width>10</width>
+                    <height>10</height>
+                  </size>
+                  </property>
+                  <property name="text">
+                  <string>∧</string>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <widget class="QPushButton" name="button_up_scene_item">
+                  <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="maximumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="baseSize">
+                  <size>
+                    <width>10</width>
+                    <height>10</height>
+                  </size>
+                  </property>
+                  <property name="text">
+                  <string>↑</string>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <widget class="QPushButton" name="button_down_scene_item">
+                  <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="maximumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="baseSize">
+                  <size>
+                    <width>10</width>
+                    <height>10</height>
+                  </size>
+                  </property>
+                  <property name="text">
+                  <string>↓</string>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <widget class="QPushButton" name="button_bottom_scene_item">
+                  <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="maximumSize">
+                  <size>
+                    <width>18</width>
+                    <height>22</height>
+                  </size>
+                  </property>
+                  <property name="baseSize">
+                  <size>
+                    <width>10</width>
+                    <height>10</height>
+                  </size>
+                  </property>
+                  <property name="text">
+                  <string>∨</string>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <spacer name="verticalSpacer">
+                  <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                  <size>
+                    <width>18</width>
+                    <height>40</height>
+                  </size>
+                  </property>
+                </spacer>
+                </item>
+              </layout>
+              </item>
+            </layout>
+            </item>
+            <item>
+            <layout class="QGridLayout" name="gL_buttons">
+              <property name="spacing">
+              <number>1</number>
+              </property>
+              <item row="0" column="3">
+              <widget class="QPushButton" name="button_pdf">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>PDF</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="5">
+              <widget class="QPushButton" name="button_kpi_report">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>KPI</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="0">
+              <widget class="QPushButton" name="button_Figure">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>Figure</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="1">
+              <widget class="QPushButton" name="button_alpha_filter">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>α filter</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="0">
+              <widget class="QPushButton" name="button_derive">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>Derive</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="2">
+              <widget class="QPushButton" name="button_windowing">
+                <property name="enabled">
+                <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="font">
+                <font>
+                  <kerning>false</kerning>
+                </font>
+                </property>
+                <property name="text">
+                <string>window</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="4">
+              <widget class="QPushButton" name="button_kpi_PL">
+                <property name="enabled">
+                <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>KPI-PL</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="5">
+              <widget class="QPushButton" name="button_y_t">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>Y-t</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="2">
+              <widget class="QPushButton" name="button_cdf_plot">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>&amp;CDF</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="4">
+              <widget class="QPushButton" name="button_xy_plot">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>&amp;XY</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="1">
+              <widget class="QPushButton" name="button_rm_scene">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>remove</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="6">
+              <widget class="QPushButton" name="button_enum">
+                <property name="enabled">
+                <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="font">
+                <font>
+                  <kerning>false</kerning>
+                </font>
+                </property>
+                <property name="text">
+                <string>enum</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="3">
+              <widget class="QPushButton" name="button_avg_per5_plot">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>Avg-%5</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="8">
+              <widget class="QPushButton" name="button_pivot">
+                <property name="enabled">
+                <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="font">
+                <font>
+                  <kerning>false</kerning>
+                </font>
+                </property>
+                <property name="text">
+                <string>pivot</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="8">
+              <widget class="QPushButton" name="button_add_indication">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="sizeIncrement">
+                <size>
+                  <width>0</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>&gt;&gt;</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="7">
+              <widget class="QPushButton" name="button_remove_indication">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>30</width>
+                  <height>0</height>
+                </size>
+                </property>
+                <property name="maximumSize">
+                <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>&lt;&lt;</string>
+                </property>
+              </widget>
+              </item>
+            </layout>
+            </item>
+            <item>
+            <layout class="QGridLayout" name="gL_checks" columnstretch="0,0,0,0,0,0,0,0">
+              <property name="spacing">
+              <number>2</number>
+              </property>
+              <item row="0" column="0">
+              <widget class="QCheckBox" name="checkBatchImport">
+                <property name="text">
+                <string>批量导入</string>
+                </property>
+                <property name="checked">
+                <bool>true</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="1">
+              <widget class="QCheckBox" name="checkCombineSeed">
+                <property name="text">
+                <string>合并seed</string>
+                </property>
+                <property name="checked">
+                <bool>false</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="2">
+              <widget class="QCheckBox" name="check_kpi_figure">
+                <property name="text">
+                <string>KPI figure</string>
+                </property>
+                <property name="checked">
+                <bool>false</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="0">
+              <widget class="QCheckBox" name="check_ul_kpi">
+                <property name="text">
+                <string>UlKpi</string>
+                </property>
+                <property name="checked">
+                <bool>true</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="1">
+              <widget class="QCheckBox" name="check_dl_kpi">
+                <property name="text">
+                <string>DlKpi</string>
+                </property>
+                <property name="checked">
+                <bool>true</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="2">
+              <widget class="QCheckBox" name="check_voip_kpi">
+                <property name="text">
+                <string>VoipKpi</string>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="3">
+              <widget class="QCheckBox" name="check_ca_kpi">
+                <property name="text">
+                <string>CaKpi</string>
+                </property>
+                <property name="checked">
+                <bool>false</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="1" column="7">
+              <widget class="QCheckBox" name="check_custom">
+                <property name="text">
+                <string>CustomKpi</string>
+                </property>
+                <property name="checked">
+                <bool>true</bool>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="5">
+              <widget class="QCheckBox" name="check_emtc_kpi_ul">
+                <property name="text">
+                <string>EmtcUl</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="6">
+              <widget class="QCheckBox" name="check_emtc_kpi_dl">
+                <property name="text">
+                <string>EmtcDl</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="7">
+              <widget class="QCheckBox" name="check_emtc_kpi_com">
+                <property name="text">
+                <string>EmtcCom</string>
+                </property>
+              </widget>
+              </item>
+              <item row="0" column="3" colspan="2">
+              <widget class="QCheckBox" name="check_per_cell_kpi">
+                <property name="text">
+                <string>小区级KPI</string>
+                </property>
+                <property name="checked">
+                <bool>false</bool>
+                </property>
+              </widget>
+              </item>
+            </layout>
+            </item>
+          </layout>
+          </item>
+          <item>
+          <layout class="QHBoxLayout" name="hL_list_pool" stretch="1,0">
+            <property name="spacing">
+            <number>2</number>
+            </property>
+            <item>
+            <layout class="QVBoxLayout" name="vL_list_pool" stretch="0,0">
+              <property name="spacing">
+              <number>2</number>
+              </property>
+              <item>
+              <layout class="QHBoxLayout" name="hL_list_pool_filter" stretch="0,1,0">
+                <property name="spacing">
+                <number>10</number>
+                </property>
+                <item>
+                <widget class="QLabel" name="label_pool">
+                  <property name="minimumSize">
+                  <size>
+                    <width>40</width>
+                    <height>0</height>
+                  </size>
+                  </property>
+                  <property name="text">
+                  <string>Pool</string>
+                  </property>
+                  <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <widget class="QLineEdit" name="edit_pool_filter">
+                  <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 222);</string>
+                  </property>
+                </widget>
+                </item>
+                <item>
+                <widget class="QPushButton" name="button_y_t_filter">
+                  <property name="text">
+                  <string>filter..</string>
+                  </property>
+                </widget>
+                </item>
+              </layout>
+              </item>
+              <item>
+              <widget class="QListWidget" name="list_pool">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>500</width>
+                  <height>360</height>
+                </size>
+                </property>
+                <property name="styleSheet">
+                <string notr="true">background-color: rgb(222, 255, 222);</string>
+                </property>
+                <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+                </property>
+                <property name="showDropIndicator" stdset="0">
+                <bool>false</bool>
+                </property>
+                <property name="dragEnabled">
+                <bool>false</bool>
+                </property>
+                <property name="dragDropMode">
+                <enum>QAbstractItemView::NoDragDrop</enum>
+                </property>
+                <property name="selectionMode">
+                <enum>QAbstractItemView::ExtendedSelection</enum>
+                </property>
+                <property name="movement">
+                <enum>QListView::Static</enum>
+                </property>
+              </widget>
+              </item>
+            </layout>
+            </item>
+            <item>
+            <layout class="QVBoxLayout" name="hL_list_pool_sort">
+              <item>
+              <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                <size>
+                  <width>18</width>
+                  <height>30</height>
+                </size>
+                </property>
+              </spacer>
+              </item>
+              <item>
+              <widget class="QPushButton" name="button_up_pool_item">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>18</width>
+                  <height>22</height>
+                </size>
+                </property>
+                <property name="maximumSize">
+                <size>
+                  <width>18</width>
+                  <height>22</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>↑</string>
+                </property>
+              </widget>
+              </item>
+              <item>
+              <widget class="QPushButton" name="button_down_pool_item">
+                <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                <size>
+                  <width>18</width>
+                  <height>22</height>
+                </size>
+                </property>
+                <property name="maximumSize">
+                <size>
+                  <width>18</width>
+                  <height>22</height>
+                </size>
+                </property>
+                <property name="text">
+                <string>↓</string>
+                </property>
+              </widget>
+              </item>
+              <item>
+              <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                <size>
+                  <width>18</width>
+                  <height>40</height>
+                </size>
+                </property>
+              </spacer>
+              </item>
+            </layout>
+            </item>
+          </layout>
+          </item>
+        </layout>
+        </item>
+        <item row="1" column="0">
+        <widget class="QTabWidget" name="tabDisplay">
+          <property name="font">
+          <font>
+            <kerning>true</kerning>
+          </font>
+          </property>
+          <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
+          </property>
+          <property name="currentIndex">
+          <number>0</number>
+          </property>
+          <widget class="QWidget" name="widgetInfoInDisplay">
+          <attribute name="title">
+            <string>Info</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+            <property name="leftMargin">
+            <number>0</number>
+            </property>
+            <property name="topMargin">
+            <number>0</number>
+            </property>
+            <property name="rightMargin">
+            <number>0</number>
+            </property>
+            <property name="bottomMargin">
+            <number>0</number>
+            </property>
+            <property name="spacing">
+            <number>0</number>
+            </property>
+            <item row="0" column="0">
+            <widget class="QTextBrowser" name="text_display">
+              <property name="font">
+              <font>
+                <pointsize>10</pointsize>
+              </font>
+              </property>
+              <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 242, 222);</string>
+              </property>
+              <property name="openExternalLinks">
+              <bool>true</bool>
+              </property>
+            </widget>
+            </item>
+          </layout>
+          </widget>
+          <widget class="QWidget" name="widgetStatInDisplay">
+          <attribute name="title">
+            <string>Stat.</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_7">
+            <property name="leftMargin">
+            <number>0</number>
+            </property>
+            <property name="topMargin">
+            <number>0</number>
+            </property>
+            <property name="rightMargin">
+            <number>0</number>
+            </property>
+            <property name="bottomMargin">
+            <number>0</number>
+            </property>
+            <property name="spacing">
+            <number>0</number>
+            </property>
+            <item row="0" column="0">
+            <widget class="QTableWidget" name="tableStat">
+              <property name="font">
+              <font>
+                <pointsize>8</pointsize>
+              </font>
+              </property>
+              <property name="styleSheet">
+              <string notr="true">QHeaderView{font:bold;background:skyblue;}
+QHeaderView::section{background:skyblue;}</string>
+              </property>
+              <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+              </property>
+              <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="rowCount">
+              <number>5</number>
+              </property>
+              <property name="columnCount">
+              <number>10</number>
+              </property>
+              <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+              <number>16</number>
+              </attribute>
+              <attribute name="verticalHeaderHighlightSections">
+              <bool>false</bool>
+              </attribute>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+            </widget>
+            </item>
+          </layout>
+          </widget>
+        </widget>
+        </item>
+      </layout>
+      </widget>
+      <widget class="QWidget" name="widgetSecondPage">
+      <attribute name="title">
+        <string>Data</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+        <property name="leftMargin">
+        <number>0</number>
+        </property>
+        <property name="topMargin">
+        <number>0</number>
+        </property>
+        <property name="rightMargin">
+        <number>0</number>
+        </property>
+        <property name="bottomMargin">
+        <number>0</number>
+        </property>
+        <property name="spacing">
+        <number>2</number>
+        </property>
+        <item row="0" column="0">
+        <widget class="QTableWidget" name="tablePlotData">
+          <property name="font">
+          <font>
+            <family>Tahoma</family>
+            <pointsize>10</pointsize>
+          </font>
+          </property>
+          <property name="styleSheet">
+          <string notr="true">background-color: rgb(222, 255, 222);</string>
+          </property>
+          <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+          </property>
+          <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+          <number>15</number>
+          </attribute>
+        </widget>
+        </item>
+      </layout>
+      </widget>
+    </widget>
+    </item>
+  </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+  <property name="geometry">
+    <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1372</width>
+    <height>23</height>
+    </rect>
+  </property>
+  <widget class="QMenu" name="menuFile">
+    <property name="title">
+    <string>File</string>
+    </property>
+    <addaction name="actionImport"/>
+    <addaction name="actionBack_up"/>
+    <addaction name="actionRecover"/>
+    <addaction name="actionMerge"/>
+  </widget>
+  <widget class="QMenu" name="menuSetting">
+    <property name="title">
+    <string>Setting</string>
+    </property>
+    <addaction name="actionGeneral_setting"/>
+    <addaction name="actionCustom_KPI"/>
+    <addaction name="actionCustom_cell_stat"/>
+    <addaction name="actionCustom_user_stat"/>
+    <addaction name="actionSave_setting"/>
+    <addaction name="actionShow_KPI"/>
+  </widget>
+  <widget class="QMenu" name="menuHelp">
+    <property name="title">
+    <string>Help</string>
+    </property>
+    <addaction name="actionViewLog"/>
+    <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QMenu" name="menuTool">
+    <property name="title">
+    <string>Tool</string>
+    </property>
+    <addaction name="action_mcs_tbs_tool"/>
+    <addaction name="actionPucchRB_Calc"/>
+    <addaction name="actionFiles_Process"/>
+  </widget>
+  <widget class="QMenu" name="menuCounter">
+    <property name="title">
+    <string>Counter</string>
+    </property>
+    <addaction name="actionMerge_counter_files"/>
+    <addaction name="actionCounter_KPI"/>
+  </widget>
+  <addaction name="menuFile"/>
+  <addaction name="menuSetting"/>
+  <addaction name="menuCounter"/>
+  <addaction name="menuTool"/>
+  <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionImport">
+  <property name="text">
+    <string>Import...</string>
+  </property>
+  </action>
+  <action name="actionBack_up">
+  <property name="enabled">
+    <bool>false</bool>
+  </property>
+  <property name="text">
+    <string>Back up</string>
+  </property>
+  </action>
+  <action name="actionRecover">
+  <property name="enabled">
+    <bool>false</bool>
+  </property>
+  <property name="text">
+    <string>Recover</string>
+  </property>
+  </action>
+  <action name="actionMerge">
+  <property name="text">
+    <string>Merge</string>
+  </property>
+  </action>
+  <action name="actionCustom_KPI">
+  <property name="text">
+    <string>Custom KPI</string>
+  </property>
+  </action>
+  <action name="actionCustom_cell_stat">
+  <property name="text">
+    <string>Custom cell stat</string>
+  </property>
+  </action>
+  <action name="actionCustom_user_stat">
+  <property name="text">
+    <string>Custom user stat</string>
+  </property>
+  </action>
+  <action name="actionGeneral_setting">
+  <property name="text">
+    <string>General setting</string>
+  </property>
+  </action>
+  <action name="actionAbout">
+  <property name="text">
+    <string>About</string>
+  </property>
+  </action>
+  <action name="action_mcs_tbs_tool">
+  <property name="text">
+    <string>MCS/TBS tool</string>
+  </property>
+  </action>
+  <action name="actionSave_setting">
+  <property name="text">
+    <string>Save setting</string>
+  </property>
+  </action>
+  <action name="actionCounter_KPI">
+  <property name="text">
+    <string>Counter KPI</string>
+  </property>
+  </action>
+  <action name="actionMerge_counter_files">
+  <property name="text">
+    <string>Merge counter files</string>
+  </property>
+  </action>
+  <action name="actionShow_KPI">
+  <property name="text">
+    <string>Show KPI</string>
+  </property>
+  </action>
+  <action name="actionCopyKpi">
+  <property name="text">
+    <string>Copy&amp;Kpi</string>
+  </property>
+  </action>
+  <action name="actionPucchRB_Calc">
+  <property name="text">
+    <string>PucchRB Calc</string>
+  </property>
+  </action>
+  <action name="actionViewLog">
+  <property name="text">
+    <string>View Log</string>
+  </property>
+  </action>
+  <action name="actionFiles_Process">
+  <property name="text">
+    <string>Files Process</string>
+  </property>
+  </action>
+</widget>
+<resources/>
+<connections/>
+<slots>
+  <slot>sceneItemClickedPro()</slot>
+</slots>
+</ui>

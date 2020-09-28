@@ -50,6 +50,7 @@ HEADERS += \
 
 #工程中包含的.ui设计文件
 FORMS += \
+        mainwindow.ui \
         pivot.ui
 
 ##指定uic命令将.ui文件转化成ui_*.h文件的存放的目录
