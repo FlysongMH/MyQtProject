@@ -34,6 +34,7 @@ SOURCES += \
         dataframe.cpp \
         dataseries.cpp \
         main.cpp \
+        mainwindow.cpp \
         pivot.cpp \
         pivot_import.cpp \
         pivot_slot.cpp
@@ -45,6 +46,7 @@ HEADERS += \
         database.h \
         dataframe.h \
         dataseries.h \
+        mainwindow.h \
         pivot.h \
         version.h
 
@@ -53,8 +55,8 @@ FORMS += \
         mainwindow.ui \
         pivot.ui
 
-##指定uic命令将.ui文件转化成ui_*.h文件的存放的目录
-#UI_DIR += UI_HEAD
+#指定uic命令将.ui文件转化成ui_*.h文件的存放的目录
+UI_DIR += UI_HEAD
 
 RC_FILE += \
     pivot.rc

@@ -2,6 +2,7 @@
 #include <QStyleFactory>
 #include <QDebug>
 #include "pivot.h"
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +11,8 @@ int main(int argc, char *argv[])
     app.setStyle(QStyleFactory::create("Fusion"));
 //    app.setFont(QFont("Microsoft YaHei UI", 9));
     
-    Pivot w;
+//    Pivot w;
+    MainWindow w;
     w.setWindowIcon(QIcon(":/ico/logo.ico")); //设置窗口图标
     w.show();
     
