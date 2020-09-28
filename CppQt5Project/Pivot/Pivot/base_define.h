@@ -1,6 +1,8 @@
 ﻿#ifndef BASE_DEFINE_H
 #define BASE_DEFINE_H
 
+/* 自定义数据结构 */
+
 //std header
 #include <vector>
 #include <QStringList>

@@ -1,6 +1,8 @@
 ﻿#ifndef DATABASE_H
 #define DATABASE_H
 
+//数据表格类, 处理一个数据表格
+
 #include "dataseries.h"
 
 

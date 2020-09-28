@@ -1,7 +1,7 @@
 ﻿#ifndef STDINT_H
 #define STDINT_H
 
-/* 数字相关定义 */
+/* 自定义数字类型 */
 
 // signed
 typedef signed char        INT8;

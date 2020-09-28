@@ -1,6 +1,7 @@
-﻿//数据库类, 存储所有导入的数据, 通过DataFrame或者Series存储
-#ifndef DATA_H
+﻿#ifndef DATA_H
 #define DATA_H
+
+//数据库类, 管理多个数据表格。支持数据透视
 
 #include "dataframe.h"
 

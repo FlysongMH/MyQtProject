@@ -1,6 +1,9 @@
 ﻿#ifndef PIVOT_H
 #define PIVOT_H
 
+//数据透视表界面，管理数据库与窗口界面的交互等
+
+
 #include <QWidget>
 #include <QtWidgets>
 #include <QMainWindow>

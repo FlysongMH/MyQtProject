@@ -1,10 +1,14 @@
 ﻿#ifndef SERIES_H
 #define SERIES_H
+
+//数据序列类, 处理一列数据
+
 #include <typeinfo>
 #include "base_define.h"
 #include "base_number.h"
 
-//数据序列类, 支持不同的数据类型T
+
+
 class Series
 {
 public:
