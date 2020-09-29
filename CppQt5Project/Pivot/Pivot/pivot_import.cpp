@@ -120,7 +120,7 @@ void Pivot::OpenOneFile(const QString &FilePath)
     
     
     DataFrame *table = new DataFrame((UINT32)row_cnt, (UINT32)col_cnt);
-    m_database->add_table(table);
+    m_database->add_table(table, "");
     //第二遍读取, 存储数据
     inputStream.seek(pos_start);
     time.start();

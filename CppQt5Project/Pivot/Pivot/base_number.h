@@ -2,7 +2,7 @@
 #define STDINT_H
 
 /* 自定义数字类型 */
-
+typedef int        BOOL;
 // signed
 typedef signed char        INT8;
 typedef short              INT16;
